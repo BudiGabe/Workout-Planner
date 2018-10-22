@@ -3,12 +3,14 @@ package com.example.razok.percents;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 public class FragmentCommon extends Fragment {
+    ViewGroup rootView;
     TextView instr;
     FloatingActionButton calculateButton;
     EditText weight;
@@ -19,9 +21,17 @@ public class FragmentCommon extends Fragment {
     double finalValue[] = new double[7];
     static final int INIT_ROW_NUM = 0;
     void instantiate(){
-
+        instr = (TextView) rootView.findViewById((R.id.instr));
+        weight = (EditText) rootView.findViewById(R.id.weight);
+        calculateButton = (FloatingActionButton) rootView.findViewById(R.id.calculateButton);
+        tableLayout = (TableLayout) rootView.findViewById(R.id.tableLayout);
     }
-
+    void resetRows(){
+        if(rowNum >= 7){
+            rowNum = INIT_ROW_NUM;
+            tableLayout.removeAllViews();
+        }
+    }
     TextView createNewTextView(String string ){
         TextView text = new TextView(getActivity());
         text.setText(string);
