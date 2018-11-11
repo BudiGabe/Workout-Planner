@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Percents</string>
     <string name="instr">Insert your weight here!</string>
+    <string-array name="type_array">
+        <item>Ascending</item>
+        <item>Up/Down</item>
+        <item>Descending</item>
+    </string-array>
+    <string name="ascend">Ascending</string>
+    <string name="pyramid">Pyramid</string>
+    <string name="descend">Descending</string>
 </resources>

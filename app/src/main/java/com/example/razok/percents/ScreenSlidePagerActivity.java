@@ -43,10 +43,10 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return new Fragment531();
-                case 1: return new FragmentCustom();
-                case 2: return new FragmentDeload();
-                default: return new FragmentCustom();
+                case 0: return Fragment531.newInstance();
+                case 1:  return FragmentCustom.newInstance();
+                case 2:  return FragmentBBB.newInstance();
+                default: return FragmentCustom.newInstance();
             }
         }
 

@@ -27,7 +27,7 @@ public class FragmentCommon extends Fragment {
         tableLayout = (TableLayout) rootView.findViewById(R.id.tableLayout);
     }
     void resetRows(){
-        if(rowNum >= 7){
+        if(rowNum >= 5){
             rowNum = INIT_ROW_NUM;
             tableLayout.removeAllViews();
         }
@@ -37,12 +37,17 @@ public class FragmentCommon extends Fragment {
         text.setText(string);
         return text;
     }
-    void createRows (int rowNum, double percentValue, int weightValue, double finalValue[]){
+    void incrementPercent(){ percentValue += 10;}
+    void decrementPercent(){ percentValue -= 10;}
+
+    void createRow(int rowNum, double percentValue, int weightValue, double finalValue[]){
         final TableRow row = new TableRow(getActivity());
+        finalValue[rowNum] = (percentValue/100)*weightValue;
         String finalString = String.format("%.2f", finalValue[rowNum]);
         String weightString = Integer.toString(weightValue);
         String percentString = String.format("%.0f", percentValue);
         row.setGravity(Gravity.CENTER_HORIZONTAL);
+        row.addView(createNewTextView("Set " + (rowNum + 1) + ": "));
         row.addView(createNewTextView(percentString + "% of "));
         row.addView(createNewTextView(weightString + " is: "));
         row.addView(createNewTextView(finalString));

@@ -21,12 +21,16 @@ public class FragmentCustom extends FragmentCommon {
                 resetRows();
                 weightValue = Integer.parseInt(weight.getText().toString());
                 percentValue = Integer.parseInt(percent.getText().toString());
-                finalValue[rowNum] = (percentValue/100)*weightValue;
-                createRows(rowNum, percentValue, weightValue, finalValue);
+                createRow(rowNum, percentValue, weightValue, finalValue);
                 rowNum++;
             }
         });
         return rootView;
+    }
+
+    public static FragmentCustom newInstance() {
+        FragmentCustom fCustom = new FragmentCustom();
+        return fCustom;
     }
 
 }
