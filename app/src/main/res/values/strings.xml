@@ -9,4 +9,20 @@
     <string name="ascend">Ascending</string>
     <string name="pyramid">Pyramid</string>
     <string name="descend">Descending</string>
+    <string-array name="exercise">
+        <item>Squat</item>
+        <item>Deadlift</item>
+        <item>Bench Press</item>
+        <item>Overhead Press</item>
+        <item>Rows</item>
+        <item>Clean and Jerk</item>
+        <item>Snatch</item>
+    </string-array>
+    <string name="squat">Squat</string>
+    <string name="deadlift">Deadlift</string>
+    <string name="bench">Bench Press</string>
+    <string name="oh">Overhead Press</string>
+    <string name="rows">Rows</string>
+    <string name="clean">Clean and Jerk</string>
+    <string name="snatch">Snatch</string>
 </resources>
