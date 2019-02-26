@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class FragmentBBB extends FragmentCommon {
@@ -39,6 +40,7 @@ public class FragmentBBB extends FragmentCommon {
                 @Override
                 public void onClick(View v) {
                     resetRows();
+                    if(!weight.getText().toString().equals("")){
                     weightValue = Integer.parseInt(weight.getText().toString());
                     switch(typeSelected){
                         case "Ascending":
@@ -50,6 +52,10 @@ public class FragmentBBB extends FragmentCommon {
                         case "Descending":
                             createDescending();
                             break;
+                    }
+                }
+                else{
+                        Toast.makeText(getContext(), "Value is null", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

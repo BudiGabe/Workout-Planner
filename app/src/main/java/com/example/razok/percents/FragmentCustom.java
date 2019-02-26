@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class FragmentCustom extends FragmentCommon {
     EditText percent;
@@ -19,10 +20,14 @@ public class FragmentCustom extends FragmentCommon {
             @Override
             public void onClick(View v) {
                 resetRows();
+                if(!(weight.getText().toString().equals("") || percent.getText().toString().equals(""))) {
                 weightValue = Integer.parseInt(weight.getText().toString());
                 percentValue = Integer.parseInt(percent.getText().toString());
                 createRow(rowNum, percentValue, weightValue, finalValue);
                 rowNum++;
+            } else {
+                    Toast.makeText(getContext(), "Value is null", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         return rootView;

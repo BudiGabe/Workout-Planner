@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Toast;
 
 
 public class Fragment531 extends FragmentCommon {
@@ -20,6 +20,7 @@ public class Fragment531 extends FragmentCommon {
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!weight.getText().toString().equals("")){
                 currentWeek = weekSelect.getValue();
                 switch(currentWeek){                 //starting percent changes based on current training week
                     case 1:
@@ -40,6 +41,10 @@ public class Fragment531 extends FragmentCommon {
                 for(rowNum = INIT_ROW_NUM; rowNum <= 2; rowNum++){
                     createRow(rowNum, percentValue, weightValue, finalValue);
                     percentValue += 10;
+                }
+                }
+                else {
+                    Toast.makeText(getContext(), "Value is null", Toast.LENGTH_SHORT).show();
                 }
             }
         });

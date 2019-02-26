@@ -1,7 +1,8 @@
 package com.example.razok.percents;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.fragment.app.Fragment;
+
 import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.EditText;
