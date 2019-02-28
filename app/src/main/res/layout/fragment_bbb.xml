@@ -9,9 +9,13 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="382dp"
-        android:layout_height="357dp"
-        android:layout_marginBottom="25dp"
+        android:layout_width="388dp"
+        android:layout_height="386dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="33dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,15 +36,17 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginBottom="0dp">
+            android:layout_marginBottom="0dp"
+            android:divider="@color/colorAccent"
+            android:showDividers="middle">
 
         </TableLayout>
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/calculateButton"
-        android:layout_width="82dp"
-        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -49,13 +55,16 @@
         android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
+        android:tint="@color/colorPrimary"
+        app:fabCustomSize="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.901"
-        app:srcCompat="@android:drawable/ic_menu_send" />
+        app:maxImageSize="60dp"
+        app:srcCompat="@drawable/barbell" />
 
     <Spinner
         android:id="@+id/setType"
@@ -101,6 +110,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Choose a training max and a workout scheme"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,10 +129,13 @@
         android:layout_marginBottom="8dp"
         android:text="BBB"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.031" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

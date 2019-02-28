@@ -1,14 +1,23 @@
 package com.example.razok.percents;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.annotation.ColorInt;
 import androidx.fragment.app.Fragment;
 
+import android.graphics.Color;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.ResourceBundle;
 
 public class FragmentCommon extends Fragment {
     ViewGroup rootView;
@@ -33,9 +42,11 @@ public class FragmentCommon extends Fragment {
             tableLayout.removeAllViews();
         }
     }
-    TextView createNewTextView(String string ){
+    TextView createNewTextView(String string, int color ){
         TextView text = new TextView(getActivity());
         text.setText(string);
+        text.setTextColor(getResources().getColor(color));
+        text.setTextSize(15);
         return text;
     }
     void incrementPercent(){ percentValue += 10;}
@@ -48,10 +59,20 @@ public class FragmentCommon extends Fragment {
         String weightString = Integer.toString(weightValue);
         String percentString = String.format("%.0f", percentValue);
         row.setGravity(Gravity.CENTER_HORIZONTAL);
-        row.addView(createNewTextView("Set " + (rowNum + 1) + ": "));
-        row.addView(createNewTextView(percentString + "% of "));
-        row.addView(createNewTextView(weightString + " is: "));
-        row.addView(createNewTextView(finalString));
+        row.addView(createNewTextView("Set " + (rowNum + 1) + ": ", R.color.colorAccent));
+        row.addView(createNewTextView(percentString + "% of ", R.color.white));
+        row.addView(createNewTextView(weightString + " is ", R.color.white));
+        row.addView(createNewTextView(finalString, R.color.white));
+        tableLayout.addView(row,rowNum);
+
+    }
+
+    void createLine(int rowNum){
+        final TableRow row = new TableRow(getActivity());
+        View line = new View(getActivity());
+        line.setLayoutParams(new LinearLayout.LayoutParams(30, 1));
+        line.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        row.addView(line);
         tableLayout.addView(row,rowNum);
     }
 }

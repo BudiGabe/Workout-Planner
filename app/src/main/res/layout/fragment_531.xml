@@ -22,10 +22,10 @@
         android:inputType="numberSigned"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
+        app:layout_constraintVertical_bias="0.386" />
 
     <TextView
         android:id="@+id/instr"
@@ -38,6 +38,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Choose your current cycle and your training max"
+        android:textColor="@android:color/background_light"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -47,8 +49,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/calculateButton"
-        android:layout_width="82dp"
-        android:layout_height="80dp"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -56,18 +58,21 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
+        android:tint="@color/colorPrimary"
+        app:fabCustomSize="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.880"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92"
-        app:srcCompat="@android:drawable/ic_menu_send" />
+        app:layout_constraintVertical_bias="0.9"
+        app:maxImageSize="60dp"
+        app:srcCompat="@drawable/barbell" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="388dp"
-        android:layout_height="357dp"
+        android:layout_height="386dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginEnd="4dp"
@@ -94,7 +99,9 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
-            android:layout_marginBottom="0dp">
+            android:layout_marginBottom="0dp"
+            android:divider="@color/colorAccent"
+            android:showDividers="middle">
 
         </TableLayout>
     </RelativeLayout>
@@ -128,11 +135,12 @@
         android:layout_marginBottom="8dp"
         android:text="5/3/1"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        android:textColor="@color/white"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.039" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

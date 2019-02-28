@@ -13,6 +13,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="WEEK"
+        android:textColor="@android:color/background_light"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cycleNum"
@@ -36,7 +37,8 @@
         app:layout_constraintTop_toTopOf="@+id/cycleNum"
         app:layout_constraintVertical_bias="0.0"
         android:src="@drawable/valueselect_minus"
-        tools:src="@drawable/valueselect_minus" />
+        tools:src="@drawable/valueselect_minus"
+        android:tint="@color/colorAccent"/>
 
     <ImageView
         android:id="@+id/plusButton"
@@ -54,7 +56,8 @@
         app:layout_constraintTop_toTopOf="@+id/cycleNum"
         app:layout_constraintVertical_bias="0.0"
         android:src="@drawable/valueselect_plus"
-        tools:src="@drawable/valueselect_plus" />
+        tools:src="@drawable/valueselect_plus"
+        android:tint="@color/colorAccent" />
 
     <TextView
         android:id="@+id/cycleNum"
