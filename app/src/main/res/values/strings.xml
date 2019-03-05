@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Percents</string>
+    <string name="app_name">Workout Planner</string>
     <string name="instr">Insert your weight here!</string>
     <string-array name="type_array">
         <item>Ascending</item>

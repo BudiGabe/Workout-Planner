@@ -150,7 +150,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"
-        app:maxImageSize="60dp" />
+        app:maxImageSize="75dp" />
 
     <TextView
         android:id="@+id/textView"
