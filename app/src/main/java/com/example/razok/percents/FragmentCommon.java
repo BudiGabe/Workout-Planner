@@ -46,7 +46,7 @@ public class FragmentCommon extends Fragment {
         TextView text = new TextView(getActivity());
         text.setText(string);
         text.setTextColor(getResources().getColor(color));
-        text.setTextSize(15);
+        text.setTextSize(18);
         return text;
     }
     void incrementPercent(){ percentValue += 10;}
@@ -65,14 +65,5 @@ public class FragmentCommon extends Fragment {
         row.addView(createNewTextView(finalString, R.color.white));
         tableLayout.addView(row,rowNum);
 
-    }
-
-    void createLine(int rowNum){
-        final TableRow row = new TableRow(getActivity());
-        View line = new View(getActivity());
-        line.setLayoutParams(new LinearLayout.LayoutParams(30, 1));
-        line.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        row.addView(line);
-        tableLayout.addView(row,rowNum);
     }
 }

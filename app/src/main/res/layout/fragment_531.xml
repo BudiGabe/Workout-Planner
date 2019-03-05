@@ -39,7 +39,7 @@
         android:layout_marginBottom="8dp"
         android:text="Choose your current cycle and your training max"
         android:textColor="@android:color/background_light"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
